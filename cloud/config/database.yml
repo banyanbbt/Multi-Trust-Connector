@@ -1,0 +1,27 @@
+
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  port: 3306
+  timeout: 5000
+
+development:
+  <<: *default
+  host: 127.0.0.1
+  username: username
+  password: password
+  database: mtc_development
+
+test:
+  <<: *default
+  host: 127.0.0.1
+  username: username
+  password: password
+  database: mtc_test
+
+production:
+  <<: *default
+  host: prod_host
+  username: username
+  password: password
+  database: mtc_production
