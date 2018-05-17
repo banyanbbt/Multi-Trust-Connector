@@ -1,0 +1,57 @@
+<%= form_with(model: agreement, local: true) do |form| %>
+  <% if agreement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(agreement.errors.count, "error") %> prohibited this agreement from being saved:</h2>
+
+      <ul>
+      <% agreement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :agreement_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :agreement_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content, id: :agreement_content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :level %>
+    <%= form.text_field :level, id: :agreement_level %>
+  </div>
+
+  <div class="field">
+    <%= form.label :version %>
+    <%= form.text_field :version, id: :agreement_version %>
+  </div>
+
+  <div class="field">
+    <%= form.label :effective_date %>
+    <%= form.datetime_select :effective_date, id: :agreement_effective_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expiration_date %>
+    <%= form.datetime_select :expiration_date, id: :agreement_expiration_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :agreement_status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

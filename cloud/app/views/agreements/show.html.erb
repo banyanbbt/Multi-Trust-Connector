@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @agreement.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @agreement.description %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @agreement.content %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @agreement.level %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @agreement.version %>
+</p>
+
+<p>
+  <strong>Effective date:</strong>
+  <%= @agreement.effective_date %>
+</p>
+
+<p>
+  <strong>Expiration date:</strong>
+  <%= @agreement.expiration_date %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @agreement.status %>
+</p>
+
+<%= link_to 'Edit', edit_agreement_path(@agreement) %> |
+<%= link_to 'Back', agreements_path %>
