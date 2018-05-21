@@ -1,0 +1,2 @@
+class CustomerAgreement < ApplicationRecord
+end
