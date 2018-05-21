@@ -1,0 +1,2 @@
+module CustomerAgreementsHelper
+end

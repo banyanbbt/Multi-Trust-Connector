@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Customer Agreements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Owner</th>
+      <th>Receiver</th>
+      <th>Agreement</th>
+      <th>Read status</th>
+      <th>Auth status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customer_agreements.each do |customer_agreement| %>
+      <tr>
+        <td><%= customer_agreement.owner_id %></td>
+        <td><%= customer_agreement.receiver_id %></td>
+        <td><%= customer_agreement.agreement_id %></td>
+        <td><%= customer_agreement.read_status %></td>
+        <td><%= customer_agreement.auth_status %></td>
+        <td><%= link_to 'Show', customer_agreement %></td>
+        <td><%= link_to 'Edit', edit_customer_agreement_path(customer_agreement) %></td>
+        <td><%= link_to 'Destroy', customer_agreement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Customer Agreement', new_customer_agreement_path %>
