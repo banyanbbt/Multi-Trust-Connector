@@ -1,0 +1,42 @@
+<%= form_with(model: customer_agreement, local: true) do |form| %>
+  <% if customer_agreement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(customer_agreement.errors.count, "error") %> prohibited this customer_agreement from being saved:</h2>
+
+      <ul>
+      <% customer_agreement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :owner_id %>
+    <%= form.number_field :owner_id, id: :customer_agreement_owner_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :receiver_id %>
+    <%= form.number_field :receiver_id, id: :customer_agreement_receiver_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :agreement_id %>
+    <%= form.number_field :agreement_id, id: :customer_agreement_agreement_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :read_status %>
+    <%= form.text_field :read_status, id: :customer_agreement_read_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :auth_status %>
+    <%= form.text_field :auth_status, id: :customer_agreement_auth_status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

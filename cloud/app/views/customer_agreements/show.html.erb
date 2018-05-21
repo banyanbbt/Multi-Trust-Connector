@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @customer_agreement.owner_id %>
+</p>
+
+<p>
+  <strong>Receiver:</strong>
+  <%= @customer_agreement.receiver_id %>
+</p>
+
+<p>
+  <strong>Agreement:</strong>
+  <%= @customer_agreement.agreement_id %>
+</p>
+
+<p>
+  <strong>Read status:</strong>
+  <%= @customer_agreement.read_status %>
+</p>
+
+<p>
+  <strong>Auth status:</strong>
+  <%= @customer_agreement.auth_status %>
+</p>
+
+<%= link_to 'Edit', edit_customer_agreement_path(@customer_agreement) %> |
+<%= link_to 'Back', customer_agreements_path %>
