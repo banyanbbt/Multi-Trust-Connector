@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  serial_no: MyString
+  agreement_code: MyString
+  product_id: 1
+  product_name: MyString
+  product_version: MyString
+  system_version: MyString
+  sdk_version: MyString
+  agreed_on: 2018-06-07
+  device_content: MyText
+
+two:
+  serial_no: MyString
+  agreement_code: MyString
+  product_id: 1
+  product_name: MyString
+  product_version: MyString
+  system_version: MyString
+  sdk_version: MyString
+  agreed_on: 2018-06-07
+  device_content: MyText

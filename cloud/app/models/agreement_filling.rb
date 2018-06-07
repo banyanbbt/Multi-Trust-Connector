@@ -1,0 +1,2 @@
+class AgreementFilling < ApplicationRecord
+end
