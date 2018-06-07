@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @message.owner_id %>
+</p>
+
+<p>
+  <strong>Receiver:</strong>
+  <%= @message.receiver_id %>
+</p>
+
+<p>
+  <strong>Agreement:</strong>
+  <%= @message.agreement_id %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @message.content %>
+</p>
+
+<p>
+  <strong>Read status:</strong>
+  <%= @message.read_status %>
+</p>
+
+<p>
+  <strong>Auth status:</strong>
+  <%= @message.auth_status %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @message.status %>
+</p>
+
+<%= link_to 'Edit', edit_message_path(@message) %> |
+<%= link_to 'Back', messages_path %>
