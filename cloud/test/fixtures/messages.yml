@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  owner_id: 1
+  receiver_id: 1
+  agreement_id: 1
+  content: MyString
+  read_status: MyString
+  auth_status: MyString
+  status: MyString
+
+two:
+  owner_id: 1
+  receiver_id: 1
+  agreement_id: 1
+  content: MyString
+  read_status: MyString
+  auth_status: MyString
+  status: MyString
