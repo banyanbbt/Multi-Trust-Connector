@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @product.customer_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @product.avatar %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @product.website %>
+</p>
+
+<p>
+  <strong>Application token:</strong>
+  <%= @product.application_token %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @product.version %>
+</p>
+
+<p>
+  <strong>Support platform:</strong>
+  <%= @product.support_platform %>
+</p>
+
+<p>
+  <strong>Download link:</strong>
+  <%= @product.download_link %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @product.status %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
