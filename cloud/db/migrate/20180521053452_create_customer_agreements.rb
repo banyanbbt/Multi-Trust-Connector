@@ -4,8 +4,7 @@ class CreateCustomerAgreements < ActiveRecord::Migration[5.1]
       t.integer :owner_id
       t.integer :receiver_id
       t.integer :agreement_id
-      t.string :read_status
-      t.string :auth_status
+      t.string :status
 
       t.timestamps
     end
