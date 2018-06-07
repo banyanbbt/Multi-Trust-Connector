@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Serial no:</strong>
+  <%= @agreement_filling.serial_no %>
+</p>
+
+<p>
+  <strong>Agreement code:</strong>
+  <%= @agreement_filling.agreement_code %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @agreement_filling.product_id %>
+</p>
+
+<p>
+  <strong>Product name:</strong>
+  <%= @agreement_filling.product_name %>
+</p>
+
+<p>
+  <strong>Product version:</strong>
+  <%= @agreement_filling.product_version %>
+</p>
+
+<p>
+  <strong>System version:</strong>
+  <%= @agreement_filling.system_version %>
+</p>
+
+<p>
+  <strong>Sdk version:</strong>
+  <%= @agreement_filling.sdk_version %>
+</p>
+
+<p>
+  <strong>Agreed on:</strong>
+  <%= @agreement_filling.agreed_on %>
+</p>
+
+<p>
+  <strong>Device content:</strong>
+  <%= @agreement_filling.device_content %>
+</p>
+
+<%= link_to 'Edit', edit_agreement_filling_path(@agreement_filling) %> |
+<%= link_to 'Back', agreement_fillings_path %>

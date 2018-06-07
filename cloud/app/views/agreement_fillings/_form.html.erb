@@ -1,0 +1,62 @@
+<%= form_with(model: agreement_filling, local: true) do |form| %>
+  <% if agreement_filling.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(agreement_filling.errors.count, "error") %> prohibited this agreement_filling from being saved:</h2>
+
+      <ul>
+      <% agreement_filling.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :serial_no %>
+    <%= form.text_field :serial_no, id: :agreement_filling_serial_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :agreement_code %>
+    <%= form.text_field :agreement_code, id: :agreement_filling_agreement_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_id %>
+    <%= form.number_field :product_id, id: :agreement_filling_product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_name %>
+    <%= form.text_field :product_name, id: :agreement_filling_product_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_version %>
+    <%= form.text_field :product_version, id: :agreement_filling_product_version %>
+  </div>
+
+  <div class="field">
+    <%= form.label :system_version %>
+    <%= form.text_field :system_version, id: :agreement_filling_system_version %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sdk_version %>
+    <%= form.text_field :sdk_version, id: :agreement_filling_sdk_version %>
+  </div>
+
+  <div class="field">
+    <%= form.label :agreed_on %>
+    <%= form.date_select :agreed_on, id: :agreement_filling_agreed_on %>
+  </div>
+
+  <div class="field">
+    <%= form.label :device_content %>
+    <%= form.text_area :device_content, id: :agreement_filling_device_content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

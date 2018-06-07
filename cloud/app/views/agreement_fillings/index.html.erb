@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Agreement Fillings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Serial no</th>
+      <th>Agreement code</th>
+      <th>Product</th>
+      <th>Product name</th>
+      <th>Product version</th>
+      <th>System version</th>
+      <th>Sdk version</th>
+      <th>Agreed on</th>
+      <th>Device content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agreement_fillings.each do |agreement_filling| %>
+      <tr>
+        <td><%= agreement_filling.serial_no %></td>
+        <td><%= agreement_filling.agreement_code %></td>
+        <td><%= agreement_filling.product_id %></td>
+        <td><%= agreement_filling.product_name %></td>
+        <td><%= agreement_filling.product_version %></td>
+        <td><%= agreement_filling.system_version %></td>
+        <td><%= agreement_filling.sdk_version %></td>
+        <td><%= agreement_filling.agreed_on %></td>
+        <td><%= agreement_filling.device_content %></td>
+        <td><%= link_to 'Show', agreement_filling %></td>
+        <td><%= link_to 'Edit', edit_agreement_filling_path(agreement_filling) %></td>
+        <td><%= link_to 'Destroy', agreement_filling, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agreement Filling', new_agreement_filling_path %>
