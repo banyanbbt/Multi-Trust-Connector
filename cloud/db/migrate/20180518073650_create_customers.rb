@@ -6,6 +6,7 @@ class CreateCustomers < ActiveRecord::Migration[5.1]
       t.string :description
       t.string :website
       t.string :authentication_token
+      t.string :customer_type
       t.string :status
 
       t.timestamps
