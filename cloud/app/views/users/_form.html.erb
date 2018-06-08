@@ -1,0 +1,67 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :user_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :user_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :avatar %>
+    <%= form.text_field :avatar, id: :user_avatar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :user_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.text_field :password, id: :user_password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password_salt %>
+    <%= form.text_field :password_salt, id: :user_password_salt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_role_id %>
+    <%= form.number_field :user_role_id, id: :user_user_role_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_type %>
+    <%= form.text_field :user_type, id: :user_user_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :customer_id %>
+    <%= form.number_field :customer_id, id: :user_customer_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :user_status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
