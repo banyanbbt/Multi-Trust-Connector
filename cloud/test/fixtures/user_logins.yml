@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  remote_ip: MyString
+  login_on: 2018-06-08
+
+two:
+  user_id: 1
+  remote_ip: MyString
+  login_on: 2018-06-08
