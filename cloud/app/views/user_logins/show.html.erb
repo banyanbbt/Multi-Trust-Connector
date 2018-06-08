@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user_login.user_id %>
+</p>
+
+<p>
+  <strong>Remote ip:</strong>
+  <%= @user_login.remote_ip %>
+</p>
+
+<p>
+  <strong>Login on:</strong>
+  <%= @user_login.login_on %>
+</p>
+
+<%= link_to 'Edit', edit_user_login_path(@user_login) %> |
+<%= link_to 'Back', user_logins_path %>

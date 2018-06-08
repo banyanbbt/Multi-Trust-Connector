@@ -1,0 +1,32 @@
+<%= form_with(model: user_login, local: true) do |form| %>
+  <% if user_login.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user_login.errors.count, "error") %> prohibited this user_login from being saved:</h2>
+
+      <ul>
+      <% user_login.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id, id: :user_login_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :remote_ip %>
+    <%= form.text_field :remote_ip, id: :user_login_remote_ip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :login_on %>
+    <%= form.date_select :login_on, id: :user_login_login_on %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

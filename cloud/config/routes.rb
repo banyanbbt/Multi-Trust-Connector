@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :user_logins
   resources :users
   resources :messages
   resources :agreement_fillings
