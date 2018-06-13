@@ -15,16 +15,20 @@ Multi-Trust-Connector/
 ├── cloud/
 ├── api/
 ├── sdk/
-    ├── ios
-    ├── android
-    ├── js
+    ├── app_developer/
+        ├── ios
+        ├── android
+        ├── js
+    ├── data_supplier/
+        ├── java
+        ├── python
 ```
 
 There are three core modules of MTC
 
 * Cloud: permission management SaaS tool
 * API: authorization service API infrastructure
-* SDK: HTTPs-based RESTful API packages, including iOS, Android and JavaScript versions
+* SDK: HTTPs-based RESTful API packages, including iOS, Android and JavaScript versions for application developer, as well as the Java and Python versions for data supplier
 
 
 ## Getting started
