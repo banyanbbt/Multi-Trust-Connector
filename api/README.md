@@ -58,7 +58,7 @@ Request parameters
 | Parameter | Input requirements | Explanation |
 | :------------- | :------------- | :------------- |
 | app_key | Must | the key of data consumer |
-| agreement_num | Optional | the agreement number used in person and data consumer |
+| agreement_num | Must | the agreement number used in person and data consumer |
 | request_info | Must | the encrypt information |
 | type | Must | authorization channel |
 | device_info | Must | the device info of person |
