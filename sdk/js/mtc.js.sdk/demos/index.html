@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Multi-Trust-Connector js-sdk</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+    <h3 class="title"> MTC-JS-SDK </h3>
+    <div class="form">
+        <p>
+            <span class="label">Username:</span>
+            <input type="text" name="user_name" id="user_name" placeholder="" />
+        </p>
+        <p>
+            <span class="label">Phone:</span>
+            <input type="text" name="phone_number" id="phone_number" placeholder="" />
+        </p>
+        <div class="sub">
+            <p>
+                <input type="checkbox" name="agree_status" id="agree_status" />
+                <span>Agree</span>
+            </p>
+            <button>Submit</button>
+        </div>
+    </div>
+    <div class="result form">
+        <h4>Your Submit: </h4>
+        <ul>
+            <li>Username: <span id="result_name"></span> </li>
+            <li>Phone: <span id="result_num"></span> </li>
+            <li>Agree: <span id="result_agree"></span> </li>
+        </ul>
+        <h4>Your Token: </h4>
+        <span>305775020186817200025592</span>
+    </div>
+
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/MD5.min.js"></script>
+    <script src="./js/mtc.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            init('MTC-API-URL', 'Your-APP-Key', 'Your-Agreement-Number');
+
+            $('button').click(function () {
+
+                var user_name = $('#user_name').val();
+                var phone_number = $('#phone_number').val();
+                var agree_status = $('#agree_status').prop('checked');
+
+                auth(user_name, phone_number, agree_status);
+
+                $('#result_name').text(user_name);
+                $('#result_num').text(phone_number);
+                $('#result_agree').text(agree_status ? 'yes' : 'no');
+                $('.result').fadeIn(400);
+            });
+        });
+    </script>
+</body>
+
+</html>
