@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180607083625) do
+ActiveRecord::Schema.define(version: 20180608030842) do
 
   create_table "agreement_fillings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string "serial_no"
@@ -76,6 +76,18 @@ ActiveRecord::Schema.define(version: 20180607083625) do
     t.index ["status"], name: "index_customers_on_status"
   end
 
+  create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+    t.integer "owner_id"
+    t.integer "receiver_id"
+    t.integer "agreement_id"
+    t.string "content"
+    t.string "read_status"
+    t.string "auth_status"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.integer "customer_id"
     t.string "name"
@@ -91,6 +103,51 @@ ActiveRecord::Schema.define(version: 20180607083625) do
     t.datetime "updated_at", null: false
     t.index ["customer_id"], name: "index_products_on_customer_id"
     t.index ["name"], name: "index_products_on_name"
+  end
+
+  create_table "roles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+    t.string "name"
+    t.string "description"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_logins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+    t.integer "user_id"
+    t.string "remote_ip"
+    t.date "login_on"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["login_on"], name: "index_user_logins_on_login_on"
+    t.index ["user_id"], name: "index_user_logins_on_user_id"
+  end
+
+  create_table "user_roles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+    t.integer "user_id"
+    t.integer "role_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["role_id"], name: "index_user_roles_on_role_id"
+    t.index ["user_id"], name: "index_user_roles_on_user_id"
+  end
+
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+    t.string "name"
+    t.string "email"
+    t.string "avatar"
+    t.string "description"
+    t.string "password"
+    t.string "password_salt"
+    t.integer "user_role_id"
+    t.string "user_type"
+    t.integer "customer_id"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["name"], name: "index_users_on_name", unique: true
+    t.index ["user_role_id"], name: "index_users_on_user_role_id"
   end
 
 end
