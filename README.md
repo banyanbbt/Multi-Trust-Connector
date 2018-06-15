@@ -15,20 +15,18 @@ Multi-Trust-Connector/
 ├── cloud/
 ├── api/
 ├── sdk/
-    ├── app_developer/
-        ├── ios
-        ├── android
-        ├── js
-    ├── data_supplier/
-        ├── java
-        ├── python
+    ├── ios
+    ├── android
+    ├── js
+    ├── java
+    ├── python
 ```
 
 There are three core modules of MTC
 
 * Cloud: permission management SaaS tool
 * API: authorization service API infrastructure
-* SDK: HTTPs-based RESTful API packages, including iOS, Android and JavaScript versions for application developer, as well as the Java and Python versions for data supplier
+* SDK: HTTPs-based RESTful API packages
 
 
 ## Getting started
@@ -55,6 +53,8 @@ There are three core modules of MTC
 
     rake db:migrate
 
+    rake db:seed
+
     rails s
 ```
 
@@ -64,22 +64,34 @@ There are three core modules of MTC
 2. Quick start of API
 
 ```
-    Coming soon...
+    sudo apt-get update
+
+    sudo apt-get install openjdk-8-jdk
+
+    echo "
+        export JAVA_HOME=$(which java)
+        export JRE_HOME=\${JAVA_HOME}/jre
+        export CLASSPATH=.:\${JAVA_HOME}/lib:\${JRE_HOME}/lib
+        export PATH=\${JAVA_HOME}/bin:\$PATH
+        " | sudo tee -a /etc/profile
+
+    source /etc/profile
+
+    echo $JAVA_HOME
 ```
 
 
 3. SDK features
 
-```
-    Coming soon...
-```
+Currently, SDK packages including iOS, Android and JavaScript versions for application developer, as well as the Java and Python versions for data supplier.
+
 
 4. Follow the guidelines to start developing this application. You may find the following resources handy:
 
 * [Banyan Network website](https://www.banyanbbt.org/)
 * [Banyan Network Telegram](https://t.me/BBNGlobalFans)
-* [Multi-Trust Connector Guides](https://www.banyanbbt.org/)
-* [The API Documentation](https://www.banyanbbt.org/)
+* [The API Documentation](https://github.com/banyanbbt/Multi-Trust-Connector/blob/develop/api/README.md)
+* [The SDK Guides](https://github.com/banyanbbt/Multi-Trust-Connector/blob/develop/sdk/README.md)
 
 
 ## Contributing
