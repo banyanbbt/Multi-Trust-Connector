@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Multi-Trust Connector Cloud Dashboard 互信通管理后台</title>
+        <%= stylesheet_link_tag 'nifty.css' %>
+        <link rel="shortcut icon" href="/assets/favicon.ico">
+        <link rel="apple-touch-icon" href="/assets/favicon.ico">
+    </head>
+    <body>
+        <div id="container" class="cls-container">
+            <div id="bg-overlay" class="bg-img" style="background-image: url('/assets/nifty/bg4.jpg')"></div>
+            <div class="cls-content">
+                <div class="cls-content-sm panel">
+                    <div class="panel-body">
+                        <div class="mar-ver pad-btm">
+                            <h3 class="h4 mar-no" style="font-size: 22px;">互信通云端后台</h3>
+                        </div>
+                        <%= form_tag("/home", method: "post", id: "user-login-form") do %>
+                            <div class="form-group">
+                                <input type="text" name="username" class="form-control" placeholder="用户名" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" class="form-control" placeholder="密码">
+                            </div>
+                            <div class="checkbox pad-btm text-left">
+                                <input id="demo-form-checkbox" name="remeber_me" class="magic-checkbox" type="checkbox">
+                                <label for="demo-form-checkbox">自动登录</label>
+                            </div>
+                            <button class="btn btn-primary btn-lg btn-block" type="button" onclick="userLogin();">登录</button>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%= javascript_include_tag 'nifty.js' %>
+    </body>
+</html>
