@@ -41,6 +41,8 @@ Redis 3.2 or greater is required.
 
     rake db:migrate
 
+    rake db:seed
+
     rails s
 ```
 
